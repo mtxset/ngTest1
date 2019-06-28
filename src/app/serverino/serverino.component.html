@@ -1,0 +1,25 @@
+<div class="container-fluid">
+    <serverino-cockpit-comp
+      (serverCreated)="onServerAdded($event)"
+      (blueprintCreated)="onBlueprintAdded($event)">
+    </serverino-cockpit-comp>
+    <hr>
+
+    <div class="row">
+      <div class="col-md-6">
+        <button class="btn btn-primary" (click)="onChangeFirst()">Change First</button>
+        <button class="btn btn-danger" (click)="onDestroyFirst()">Destroy First</button>
+
+        <serverino-server-element
+          *ngFor="let item of serverElements"
+          [name]="item.name"
+          [server-element-input]="item">
+          <p #contentP>
+            <strong *ngIf="item.type === 'server'" style="color: red">{{ item.content }}</strong>
+            <em *ngIf="item.type === 'blueprint'">{{ item.content }}</em>
+          </p>
+        </serverino-server-element>
+      </div>
+    </div>
+
+  </div>

@@ -1,0 +1,14 @@
+<div class="card">
+    <div class="card-header">
+      Event: {{event.name}}
+    </div>
+    <div>
+      Date: {{event.date}}
+    </div>
+    <div>
+      Time: {{event.time}}
+    </div>
+    <tasks-ng-input-addr-comp [location]="event.location">
+
+    </tasks-ng-input-addr-comp>
+  </div>

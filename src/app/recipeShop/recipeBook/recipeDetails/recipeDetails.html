@@ -1,0 +1,56 @@
+<div *ngIf="recipe; else infoText">
+  <div class="row">
+    <div class="col">
+      <img src="" class="img-responsive">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <h1>{{recipe.name}}</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+
+        <button mat-raised-button [matMenuTriggerFor]="menu">Manage Recipe</button>
+        <mat-menu #menu="matMenu">
+          <button (click)="onAddToShoppingList()" mat-menu-item>Add to Shopping List</button>
+          <button mat-menu-item>Edit</button>
+          <button mat-menu-item>Delete</button>
+        </mat-menu>
+
+    </div>
+  </div>
+  <div class="row">
+      <div class="col">
+        <img
+          [src]="recipe.imgURL"
+          alt="{{recipe.name}}"
+          class="img-responsive"
+          style="max-height: 300px">
+      </div>
+    </div>
+
+  <div class="row">
+    <div class="col">
+      {{recipe.desc}}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <ul class="list-group">
+        <li *ngFor="let item of recipe.ingredients" class="list-group-item">{{item.name}} ({{item.amount}})</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<ng-template #infoText>
+  <div class="row">
+    <div class="col">
+      No recipe was selected
+    </div>
+  </div>
+</ng-template>

@@ -1,0 +1,28 @@
+<div class="container">
+  <h1>Congratulations!</h1>
+  <h4>You got your component to display!</h4>
+  <hr>
+  <h5>How does your event look below?</h5>
+
+  <div class="row">
+    Event: {{ data.name }}
+  </div>
+  <div class="row">
+    Date: {{ data.date }}
+  </div>
+  <div class="row">
+    Time: {{ data.time }}
+  </div>
+  <div class="row">
+    Location:
+    <div>
+      Address: {{data.location.address}}
+    </div>
+    <div>
+      City: {{data.location.city}}
+    </div>
+    <div>
+      Country: {{data.location.country}}
+    </div>
+  </div>
+</div>

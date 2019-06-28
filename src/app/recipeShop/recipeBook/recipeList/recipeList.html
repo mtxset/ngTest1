@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col">
+    <a name="" id="" class="btn btn-primary" href="#" role="button">New Recipe</a>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col" >
+
+        <recipeShop-recipe-item-comp
+          *ngFor="let item of recipes"
+          [item]="item"
+          class="list-group"
+          (click)="onRecipeClick(item)">
+        </recipeShop-recipe-item-comp>
+
+  </div>
+</div>
+

@@ -1,0 +1,25 @@
+<!-- <input
+  type="text"
+  class="form-control"
+  (input)="onUpdateServerName($event)"> -->
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]="serverName">
+
+<p>{{serverName}}</p>
+
+<button
+  class="btn button"
+  [disabled]="allowNewServers"
+  (click)="onNewServerBtnClick()">
+  Press
+</button>
+
+<p *ngIf="addedNewServer; else noServer">{{ newServers }}</p>
+
+<ng-template #noServer>
+  <p>No Servers!</p>
+</ng-template>
+
+<app-server-comp *ngFor="let item of serversLst"></app-server-comp>

@@ -1,0 +1,61 @@
+<mat-tab-group backgroundColor="accent">
+
+  <mat-tab label="directives-hide-them-all">
+    <tasks-hide-them></tasks-hide-them>
+  </mat-tab>
+
+  <mat-tab label="cont-proj-multi">
+    <tasks-cont-proj-multi></tasks-cont-proj-multi>
+  </mat-tab>
+
+  <mat-tab label="cont-projection">
+    <tasks-cont-projection-comp></tasks-cont-projection-comp>
+  </mat-tab>
+
+  <mat-tab label="ng-child-vars (local ref)">
+    <tasks-ng-child-vars-comp></tasks-ng-child-vars-comp>
+  </mat-tab>
+
+  <mat-tab label="ng-output">
+    <tasks-ng-output-comp></tasks-ng-output-comp>
+  </mat-tab>
+
+  <mat-tab label="ng-input">
+    <tasks-ng-input-comp></tasks-ng-input-comp>
+  </mat-tab>
+
+  <mat-tab label="Binding">
+    <binding-ex-comp></binding-ex-comp>
+  </mat-tab>
+  <mat-tab label="ngFor">
+    <app-ng-for></app-ng-for>
+  </mat-tab>
+  <mat-tab label="ngFor and ngIf">
+    <app-ng-for-and-if></app-ng-for-and-if>
+  </mat-tab>
+  <mat-tab label="ngFor and hidden">
+    <ng-for-hidden-ex-comp></ng-for-hidden-ex-comp>
+  </mat-tab>
+  <mat-tab label="ngSwitch">
+    <ngSwitch-ex-comp></ngSwitch-ex-comp>
+  </mat-tab>
+  <mat-tab label="ngClass">
+    <ngClass-ex-comp></ngClass-ex-comp>
+  </mat-tab>
+  <mat-tab label="ngStyle">
+    <ngStyle-ex-comp></ngStyle-ex-comp>
+  </mat-tab>
+
+</mat-tab-group>
+
+<nav mat-tab-nav-bar>
+  <a mat-tab-link
+     *ngFor="let link of navLinks"
+     [routerLink]="link.path"
+     routerLinkActive #rla="routerLinkActive"
+     [active]="rla.isActive">
+    {{link.label}}
+  </a>
+</nav>
+
+<!-- <router-outlet></router-outlet> -->

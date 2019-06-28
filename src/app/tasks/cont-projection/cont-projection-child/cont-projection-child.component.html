@@ -1,0 +1,5 @@
+<button class="btn btn-primary" (click)="onShow()">{{ getName() }}</button>
+
+<div *ngIf="hidden" class="card card-body bg-light">
+  <ng-content></ng-content>
+</div>

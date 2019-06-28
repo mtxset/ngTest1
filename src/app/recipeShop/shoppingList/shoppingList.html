@@ -1,0 +1,14 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <recipeShop-shopping-list-edit-comp>
+      </recipeShop-shopping-list-edit-comp>
+      <hr>
+      <div class="list-group">
+        <a *ngFor="let item of ingridients" href="#" class="list-group-item list-group-item-action">
+          {{ item.name }} ({{ item.amount }})
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
